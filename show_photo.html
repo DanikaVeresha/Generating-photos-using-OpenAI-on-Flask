@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show me all the documents in db:</title>
+    <form action="/show" method="post">
+        <p>Please click send and you can to see all the documents in db:</p>
+        <p><input type="submit" value="Send"></p>
+    {% for photo in documents %}
+        <p> ID: {{ photo.id }} - PROMPT: {{ photo.prompt }} - URL: {{ photo.url }} - Time: {{ photo.time }} - Status: {{ photo.status }}</p>
+    {% endfor %}
+    </form>
+</head>
+<body>
+
+</body>
+</html>
